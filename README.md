@@ -73,7 +73,7 @@
 4、网关校验用户身份令牌的合法，不合法表示用户没有登录，如果合法则放行继续访问。
 5、资源服务获取jwt令牌，根据jwt令牌完成授权  
 
-## 1.6 注册中心
+## 1.6 注册中心( [xc-govern-center](https://github.com/Binn-Xu/xc-online-backend/tree/master/xc-govern-center) )
 
 > 基本架构
 
@@ -92,10 +92,10 @@
 在虚拟机中通过docker进行以下中间件与数据库的配置：
 
 - ES：搜索
-- nginx：代理FDFS中的图片及静态图片
-- Rabbitmq：数据同步
+- nginx：反向代理
+- Rabbitmq：数据同步，消息中间件
 - Redis：缓存
-- mongodb：
+- mongodb：后端数据库
 
 并将配置文件中所有和虚拟机相关的ip进行修改
 
