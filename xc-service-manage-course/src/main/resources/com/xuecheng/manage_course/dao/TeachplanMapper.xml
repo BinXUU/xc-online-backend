@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xuecheng.manage_course.dao.TeachplanMapper">
+    <resultMap id="teachplanMap" type="com.xuecheng.framework.domain.course.ext.TeachplanNode">
+        <id property="id" column="one_id"/>
+        <result property="pname" column="one_pname"/>
+        <result property="grade" column="one_grade"/>
+        <collection property="children" ofType="com.xuecheng.framework.domain.course.ext.TeachplanNode">
+            <id property="id" column="two_id"/>
+            <result property="pname" column="two_pname"/>
+            <result property="pname" column="two_name"/>
+            <result property="grade" column="two_grade"/>
+            <collection property="children" ofType="com.xuecheng.framework.domain.course.ext.TeachplanNode">
+                <id property="id" column="three_id"/>
+                <result property="pname" column="three_pname"/>
+                <result property="grade" column="three_grade"/>
+                <result property="mediaId" column="mediaId"/>
+                <result property="mediaFileOriginalName" column="mediaFileOriginalName"/>
+            </collection>
+        </collection>
+    </resultMap>
+    <select id="selectList" parameterType="java.lang.String" resultMap="teachplanMap">
+         SELECT
+          a.id one_id,
+          a.pname one_pname,
+          a.grade one_grade,
+          a.orderby one_orderby,
+          b.id two_id,
+          b.pname two_pname,
+          b.grade two_grade,
+          b.orderby two_orderby,
+          c.id three_id,
+          c.pname three_pname,
+          c.grade three_grade,
+          c.orderby three_orderby,
+          media.media_id mediaId,
+          media.media_fileoriginalname mediaFileOriginalName
+        FROM
+          teachplan a
+          LEFT JOIN teachplan b
+            ON a.id = b.parentid
+          LEFT JOIN teachplan c
+            ON b.id = c.parentid
+          LEFT JOIN teachplan_media media
+            ON c.id = media.teachplan_id
+        WHERE a.parentid = '0'
+        <if test="_parameter!=null and _parameter!=''">
+            and a.courseid=#{courseId}
+        </if>
+        ORDER BY a.orderby,
+          b.orderby,
+          c.orderby
+      </select>
+</mapper>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/test-freemarker/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test-freemarker/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test-rabbitmq-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test-rabbitmq-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test-rabbitmq-producer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test-rabbitmq-producer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-framework-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-framework-model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-framework-utils/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-govern-center/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-govern-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-govern-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-learning/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-learning/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-manage-cms-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-manage-cms-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-manage-cms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-manage-course/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-manage-course/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-manage-media-processor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-manage-media-processor/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-manage-media/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-manage-media/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-oss-filesystem/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-search/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-ucenter-auth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-ucenter-auth/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-ucenter/src/main/java" charset="UTF-8" />
+  </component>
+</project>

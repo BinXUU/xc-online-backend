@@ -1,0 +1,21 @@
+server:
+  port: 31000
+spring:
+  application:
+    name: xc-service-manage-cms-client
+  data:
+    mongodb:
+      # uri:  mongodb://root:123@localhost:27017
+      uri:  mongodb://root:1@192.168.163.130:27017
+      database: ecnu_cms
+  rabbitmq:
+    host: 192.168.163.130
+    port: 5672
+    username: guest
+    password: guest
+    virtualHost: /cms
+xuecheng:
+  mq:
+    #cms客户端监控的队列名称（不同的客户端监控的队列不能重复）
+    queue: queue_cms_postpage_02
+    routingKey: 5dea317a1bfe3259b87ffa02    #此routingKey为门户站点ID
