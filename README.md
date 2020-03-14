@@ -13,11 +13,28 @@
 微服务治理：Eureka、Zuul、Hystrix、Spring Cloud Config等
 
 ![1584103004929](https://s1.ax1x.com/2020/03/13/8KcGTK.png)
-## 1.1   媒资管理微服务( [xc-service-manage-media](https://github.com/Binn-Xu/xc-online-backend/tree/master/xc-service-manage-media) ,  [xc-service-manage-media-processor](https://github.com/Binn-Xu/xc-online-backend/tree/master/xc-service-manage-media-processor) )
+
+## 1.1  CMS页面管理微服务( [xc-service-manage-cms](https://github.com/BinXUU/xc-online-backend/tree/master/xc-service-manage-cms),[xc-service-manage-cms-client](https://github.com/BinXUU/xc-online-backend/tree/master/xc-service-manage-cms-client) )
+
+  CMS（Content Management System）即内容管理系统，本项目对CMS系统的定位是对各各网站（子站点）页面的管理，本项目的CMS系统不去管理每个子网站的全部资源，比如：图片、CSS、html页面等，主要管理由于运营需要而经常变动的页面，从而满足根据运营需要快速开发、上线的需求。
+
+> 功能包括：  
+
+1、站点管理，站点就是本项目各各子网站，站点信息包括：站点名称、站点域名、端口、服务器物理路径等。
+2、模板管理，由于要对页面进行静态化，使用freemarker引擎技术，所以需要定义模板。
+3、页面管理，包括：页面添加、页面修改、页面删除等操作。
+4、页面预览，对页面静态化，在浏览器预览页面静态化内容。
+5、页面发布，将页面静态化后发布到所属站点服务器,通过rabbitmq实现页面的解耦发布。
+
+![1584198942042](https://s1.ax1x.com/2020/03/14/8ljAX9.png)
+
+![1584198956715](https://s1.ax1x.com/2020/03/14/8ljZ01.png)
+
+## 1.2   媒资管理微服务( [xc-service-manage-media](https://github.com/Binn-Xu/xc-online-backend/tree/master/xc-service-manage-media) ,  [xc-service-manage-media-processor](https://github.com/Binn-Xu/xc-online-backend/tree/master/xc-service-manage-media-processor) )
 
 > 功能需求
 
-​	  		每个教学机构都可以在媒资系统管理自己的教学资源，包括：视频、教案等文件。
+​		每个教学机构都可以在媒资系统管理自己的教学资源，包括：视频、教案等文件。
 
 - 媒资管理的主要管理对象是课程录播视频，包括：媒资文件的查询、视频上传、视频删除、视频处理等。
   - 媒资查询：教学机构查询自己所拥有的媒体文件。
@@ -32,14 +49,14 @@
   ​    2、使用Nginx作为媒体服务器 
   
   ​    3、客户端使用video.js播放视频 
-## 1.2搜索微服务( [xc-service-search](https://github.com/Binn-Xu/xc-online-backend/tree/master/xc-service-search) )
+## 1.3搜索微服务( [xc-service-search](https://github.com/Binn-Xu/xc-online-backend/tree/master/xc-service-search) )
 
 ![](https://s1.ax1x.com/2020/03/13/8Kc3ex.png)
 
-## 1.3 文件上传微服务( [xc-service-oss-filesystem](https://github.com/Binn-Xu/xc-online-backend/tree/master/xc-service-oss-filesystem) )
+## 1.4 文件上传微服务( [xc-service-oss-filesystem](https://github.com/Binn-Xu/xc-online-backend/tree/master/xc-service-oss-filesystem) )
 
 使用阿里云oss服务实现图片上传的需求
-## 1.4 网关微服务( [xc-govern-gateway](https://github.com/Binn-Xu/xc-online-backend/tree/master/xc-govern-gateway) )
+## 1.5 网关微服务( [xc-govern-gateway](https://github.com/Binn-Xu/xc-online-backend/tree/master/xc-govern-gateway) )
 
 > 架构图
 
@@ -62,7 +79,7 @@
 
 负载均衡(loadBalance)
 
-## 1.5 授权中心微服务( [xc-service-ucenter-auth](https://github.com/Binn-Xu/xc-online-backend/tree/master/xc-service-ucenter-auth) )
+## 1.6 授权中心微服务( [xc-service-ucenter-auth](https://github.com/Binn-Xu/xc-online-backend/tree/master/xc-service-ucenter-auth) )
 
 > Spring security + Oauth2完成用户认证及用户授权
 
@@ -73,7 +90,7 @@
 4、网关校验用户身份令牌的合法，不合法表示用户没有登录，如果合法则放行继续访问。
 5、资源服务获取jwt令牌，根据jwt令牌完成授权  
 
-## 1.6 注册中心( [xc-govern-center](https://github.com/Binn-Xu/xc-online-backend/tree/master/xc-govern-center) )
+## 1.7 注册中心( [xc-govern-center](https://github.com/Binn-Xu/xc-online-backend/tree/master/xc-govern-center) )
 
 > 基本架构
 
